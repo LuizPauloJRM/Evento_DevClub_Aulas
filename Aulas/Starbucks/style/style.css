@@ -38,29 +38,38 @@ body{
 
 /* Estilo dos links do menu */
 .navbar ul li a {
+    position: relative; /* Necessário para a linha animada */
     text-decoration: none;
     color: #128835;
     font-weight: bold;
-   
     font-size: 18px;
     transition: color 0.3s ease;
 }
 
 /* Efeito hover nos links */
 .navbar ul li a:hover {
-    color: #c0ffb3;
-    text-decoration: none;
-}
-
-
-/* Efeito hover */
-.navbar ul li a:hover {
     color: #c0ffb3; /* Tom mais claro de verde */
     text-decoration: none;
 }
 
+/* Linha animada ao passar o mouse */
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* Espaço entre texto e linha */
+    width: 0%;
+    height: 2px;
+    background-color: #128835;
+    transition: width 0.3s ease;
+}
+
+/* Anima a linha ao passar o mouse */
+.navbar ul li a:hover::after {
+    width: 100%;
+}
 .img-product{
-    width: 350px;/*Largura*/
+    width: 800px;/*Largura*/
 }
 
 /*Conteudo*/
@@ -127,4 +136,13 @@ button:hover{
     transform: scale(1.3); /* Aumenta levemente */
     /*filter: brightness(1.2); /* Deixa mais clara */
 
+}
+/* Círculo atrás do copo */
+.circulo {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-color: #006241;
+    border-radius: 50%;
+    z-index: -1;
 }

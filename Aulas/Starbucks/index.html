@@ -1,32 +1,31 @@
 <!DOCTYPE html>
-<html lang="pt-br"><!--Linguagem do site-->
-
+<html lang="pt-br"><!-- Linguagem do site -->
 
 <head>
-    <!--Cabeça :  head configurações do site-->
-    <meta charset="UTF-8"><!--Configurações caracteres-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Link do css: Aviso ao html que tem uma folha de estilo-->
-    <!--Fonte google fontes-->
+    <!-- Cabeça : head configurações do site -->
+    <meta charset="UTF-8"><!-- Configurações de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Responsividade -->
+
+    <!-- Fonte Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Link do CSS: Aviso ao HTML que existe uma folha de estilo -->
     <link rel="stylesheet" href="style/style.css">
-    <title>Starbucks</title><!--Título-->
+
+    <title>Starbucks</title><!-- Título da aba -->
 </head>
 
-
-
 <body>
-    <!--Corpo : Body tudo que é visivel no site-->
-    <!--Logo imagem: Primeiro passo da aplicação web -->
-    <img src="assets/logo.png" alt="logo">
-    <!--NavBar: Navegação , Home , Contato , produtos-->
-    <!--Atributos sao configurações dentro da tags-->
+    <!-- Corpo : Body = tudo que é visível no site -->
+
+    <!-- NavBar: Navegação com logo, Home, Contato, Produtos -->
     <div class="navbar">
-        <!--Div: Divisão do site-->
+        <!-- Logo imagem: Primeiro passo da aplicação web -->
+        <img src="assets/logo.png" alt="logo" class="logo">
+
+        <!-- Navegação do site -->
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
@@ -36,32 +35,37 @@
         </nav>
     </div>
 
+    <!-- Container principal que agrupa texto e imagem -->
     <div class="container">
+        <!-- Caixa de texto com chamadas e botão -->
         <div class="caixa-texto">
-            <!--h1,h2,h3 :  Fonte dos títulos-->
+            <!-- h1, h2, h3 : Títulos -->
             <h1>Bem-vindo ao <span>Starbucks</span></h1>
             <h2>O melhor café do mundo</h2>
             <h3>Experimente nossos produtos</h3>
-            <!--Parágrafo: Texto-->
+            <!-- Parágrafo explicativo -->
             <p>Conheça nossos produtos</p>
-            <!--Botão: Ação-->
+            <!-- Botão de ação -->
             <button>Ver produtos</button>
         </div>
 
+        <!-- Imagem principal do copo com círculo atrás -->
         <div class="img-product">
-            <!--Imagem: Produto-->
+            <!-- Círculo atrás do copo -->
+            <div class="circulo"></div>
+            <!-- Imagem do copo Starbucks -->
             <img src="assets/img1.png" alt="imagem-copo-starbucks">
-
         </div>
     </div>
 
+    <!-- Imagens menores (thumbnails) dos copos -->
     <div class="img-thumbs">
-        <!--Imagem copos pequenos: thumbs-->
-        <img class="botao-img" src="assets/thumb1.png" alt="imagem-copinho-starbucks">
-        <img class="botao-img" src="assets/thumb2.png" alt="imagem-copinho-starbucks">
-        <img class="botao-img" src="assets/thumb3.png" alt="imagem-copinho-starbucks">
+        <img onclick="mudarCor('#006241')" class="botao-img" src="assets/thumb1.png" alt="imagem-copinho-starbucks">
+        <img onclick="mudarCor('#eb7495')" class="botao-img" src="assets/thumb2.png" alt="imagem-copinho-starbucks">
+        <img onclick="mudarCor('#d752b1')" class="botao-img" src="assets/thumb3.png" alt="imagem-copinho-starbucks">
     </div>
 
 </body>
+<script src="js/script.js"></script>
 
 </html>
