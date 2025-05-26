@@ -20,8 +20,13 @@
 // Mudar a cor da imagem
 //Document = HTML 
 //getElementById = Seleciona o elemento pelo id
-let circulo = document.querySelector(".circulo");// Seleciona o elemento com a classe "circulo"
-function mudarCor(cor) {// Seleciona o elemento com id "cor"
-    circulo.style.background= cor; // Altera a cor de fundo do elemento para vermelho no estilo css
+let circulo = document.querySelector(".circulo"); // Seleciona o círculo
+let imagem = document.querySelector(".img-product img"); // Agora sim: pega a <img> dentro da div
 
+function mudarCor(cor) {
+    circulo.style.background = cor;
+}
+
+function mudarImagem(img) {
+    imagem.src = img;
 }
